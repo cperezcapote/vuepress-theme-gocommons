@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-gocommons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom Vuepress theme for GO!Commons partners applications.",
   "main": "index.js",
   "scripts": {
