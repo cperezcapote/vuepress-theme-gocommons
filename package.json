@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-gocommons",
   "version": "1.0.0",
-  "description": "A custom vuepress theme for GO!Commons partners applications.",
+  "description": "A custom Vuepress theme for GO!Commons partners applications.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
