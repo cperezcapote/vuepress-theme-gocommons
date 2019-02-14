@@ -2,9 +2,7 @@
   <header class="navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 
-    <router-link :to="$localePath" class="home-link">
-      <img class="logo" src="../assets/logo.png" alt="GO!Commons">
-    </router-link>
+    <Header/>
 
     <div
       class="links"
@@ -24,9 +22,10 @@ import SidebarButton from "./SidebarButton.vue";
 import AlgoliaSearchBox from "@AlgoliaSearchBox";
 import SearchBox from "@SearchBox";
 import NavLinks from "./NavLinks.vue";
+import Header from "./Header.vue";
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Header },
 
   data() {
     return {
