@@ -49,5 +49,16 @@ export default {
     width 55px
     margin-right 10px
 
+// wide mobile
+@media (max-width: $MQMobile)
+  .header-gocommons
+    display: none
+
+  .header-project 
+    .title
+      font-size 1.1em
+    .project-logo
+      width 45px
+      margin-right 8px
 </style>
 
