@@ -1,25 +1,53 @@
 <template>
-  <div class="header-ctn">
-    <label class="header-title">
-      <a href="https://go_commons.gitlab.io/home/" target="_blank">
-        <span>GO!</span>Commons
-      </a>
-    </label>
+  <div class="header">
+    <div class="header-gocommons">
+      <label class="title">
+        <a href="https://go_commons.gitlab.io/home/" target="_blank">
+          <span>GO!</span>Commons
+        </a>
+      </label>
+    </div>
+    <div class="header-project">
+      <img class="project-logo" v-if="data.projectLogo" :src="$withBase(data.projectLogo)">
+      <label for="title" class="title">{{ data.projectTitle }}</label>
+    </div>
   </div>
 </template>
 
-<style>
-.header-title {
-  font-size: 2em;
-}
+<script>
+export default {
+  computed: {
+    data() {
+      return this.$page.frontmatter;
+    }
+  }
+};
+</script>
 
-.header-title a {
-  color: black;
-}
+<style lang="stylus">
+.header 
+  display flex
+  align-items center
+  font-weight normal
 
-.header-title a span {
-  color: rgb(36, 163, 193);
-  font-weight: bold;
-}
+.header-gocommons 
+  margin-right 20px
+  .title 
+    font-size 1.8em  
+    a 
+      color black
+      font-weight normal
+      span
+        color rgb(36, 163, 193)
+
+.header-project 
+  display flex
+  align-items center
+  .title
+    font-size 1.5em
+  .project-logo
+    width 55px
+    margin-right 10px
+
 </style>
 
