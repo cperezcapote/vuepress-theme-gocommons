@@ -26,7 +26,12 @@
       <slot
         name="sidebar-bottom"
         slot="bottom"
-      />
+      >
+        <div class="sidebar-logo-ctn">
+          <img src="../assets/gocommons-logo.png"/>
+        </div>
+        
+      </slot>
     </Sidebar>
 
     <Home v-if="$page.frontmatter.home"/>
@@ -148,3 +153,16 @@ export default {
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="../styles/theme.styl" lang="stylus"></style>
+
+<style lang="stylus">
+.sidebar-logo-ctn
+  display flex
+  justify-content center
+  align-items center
+  width 100%
+  margin-top 50px
+  img
+    width 50%
+    height auto
+</style>
+
