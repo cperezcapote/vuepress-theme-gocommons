@@ -8,8 +8,12 @@
       </label>
     </div>
     <div class="header-project">
-      <img class="project-logo" v-if="data.projectLogo" :src="$withBase(data.projectLogo)">
-      <label for="title" class="title">{{ data.projectTitle }}</label>
+      <img
+        class="project-logo"
+        v-if="$site.themeConfig.projectLogo"
+        :src="$withBase($site.themeConfig.projectLogo)"
+      >
+      <label for="title" class="title">{{ $site.themeConfig.projectTitle }}</label>
     </div>
   </div>
 </template>
@@ -25,26 +29,31 @@ export default {
 </script>
 
 <style lang="stylus">
-.header 
+.header
   display flex
   align-items center
   font-weight normal
 
-.header-gocommons 
+.header-gocommons
   margin-right 20px
-  .title 
-    font-size 1.8em  
-    a 
+
+  .title
+    font-size 1.8em
+
+    a
       color black
       font-weight normal
+
       span
         color rgb(36, 163, 193)
 
-.header-project 
+.header-project
   display flex
   align-items center
+
   .title
     font-size 1.5em
+
   .project-logo
     width 55px
     margin-right 10px
@@ -52,11 +61,12 @@ export default {
 // wide mobile
 @media (max-width: $MQMobile)
   .header-gocommons
-    display: none
+    display none
 
-  .header-project 
+  .header-project
     .title
       font-size 1.1em
+
     .project-logo
       width 45px
       margin-right 8px
