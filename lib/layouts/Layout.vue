@@ -156,13 +156,17 @@ export default {
 
 <style lang="stylus">
 .sidebar-logo-ctn
-  display flex
-  justify-content center
-  align-items center
-  width 100%
-  margin-top 50px
-  img
-    width 50%
-    height auto
+  display none
+
+@media (max-width: $MQMobile)
+  .sidebar-logo-ctn
+    display flex
+    justify-content center
+    align-items center
+    width 100%
+    margin-top 50px
+    img
+      width 50%
+      height auto
 </style>
 
